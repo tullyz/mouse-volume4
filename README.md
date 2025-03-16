@@ -12,40 +12,24 @@ Connect a USB mouse to the raspberry pi.
 
 volumio@volumio:~$ git clone https://github.com/tullyz/mouse-volume4
 
-  (If 'fatal: destination path 'mouse-volume4' already exists and is not an empty directory.' message appears, type 
+	  (If 'fatal: destination path 'mouse-volume4' already exists and is not an empty directory.' message appears, type 
   
-  sudo su
+	  sudo su
   
-  rm -r mouse-volume4 
+	  rm -r mouse-volume4 
   
-  and try again.)
+	  and try again.)
   
 volumio@volumio:~$ cd mouse-volume
+
 volumio@volumio:~$ chmod u+x setup.sh
+
 volumio@volumio:~$ sudo su
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 　(Enter password. "volumio" is default)
  
 ./setup.sh
 
-=======
-(Enter password. "volumio" is default)
- ./setup.sh
-<<<<<<< HEAD
- 
->>>>>>> parent of 801d066 (Update README.md)
-=======
->>>>>>> parent of 747a09d (Update README.md)
-=======
-(Enter password. "volumio" is default)
- ./setup.sh
->>>>>>> parent of 747a09d (Update README.md)
-=======
-(Enter password. "volumio" is default)
- ./setup.sh
->>>>>>> parent of 747a09d (Update README.md)
 Reboot Raspberry Pi here.
 Music in the playlist (Queue) should start playing at startup.
 
@@ -56,22 +40,22 @@ volumio@volumio:~$ sed -i "s/var vol = [0-9]\+/var vol = 15/" ~/mouse-volume4/in
 
 
 
-
+-----------------
 Specification:
 
-Adjust the volume with the mouse wheel.
+-Adjust the volume with the mouse wheel.
 
-Toggle pause / play when mouse wheel is pressed.
+-Toggle pause / play when mouse wheel is pressed.
 
-Left click to select "Venice Classic Radio".
+-Left click to select "Venice Classic Radio".
 
-Right click to select "Capital London".
+-Right click to select "Capital London".
 
-Automatically start this software at startup.
+-Automatically start this software at startup.
 
-Start playing music in the playlist (Queue) at startup. 
+-Start playing music in the playlist (Queue) at startup. 
 
-Auto detection of Volumio boot-up completion. 
+-Auto detection of Volumio boot-up completion. 
 
 (Previous version needed a manual boot-up time adjustment in rc.local)
 
