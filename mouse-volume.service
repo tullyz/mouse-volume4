@@ -1,12 +1,12 @@
 [Unit]
-Description=mouse-volume
+Description=mouse-volume4
 After=volumio.service network-online.target
 
 [Service]
-ExecStart=/usr/bin/node /home/volumio/mouse-volume/index.js
+ExecStart=/usr/bin/node /home/volumio/mouse-volume4/index.js
 Restart=always
 User=volumio
-WorkingDirectory=/home/volumio/mouse-volume
+WorkingDirectory=/home/volumio/mouse-volume4
 
 [Install]
 WantedBy=multi-user.target
