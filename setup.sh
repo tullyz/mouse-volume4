@@ -1,4 +1,5 @@
 #!/bin/sh
+
 echo "Installing mouse for Volumio..."
 npm install node-mouse
 npm install socket.io-client@2.3.1
