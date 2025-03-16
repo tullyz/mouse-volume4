@@ -25,6 +25,7 @@ volumio@volumio:~$ chmod u+x setup.sh
 volumio@volumio:~$ sudo su
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 　(Enter password. "volumio" is default)
  
 ./setup.sh
@@ -36,6 +37,10 @@ volumio@volumio:~$ sudo su
  
 >>>>>>> parent of 801d066 (Update README.md)
 =======
+>>>>>>> parent of 747a09d (Update README.md)
+=======
+(Enter password. "volumio" is default)
+ ./setup.sh
 >>>>>>> parent of 747a09d (Update README.md)
 =======
 (Enter password. "volumio" is default)
