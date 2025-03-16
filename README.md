@@ -20,7 +20,7 @@ volumio@volumio:~$ cd mouse-volume
 volumio@volumio:~$ chmod u+x setup.sh
 volumio@volumio:~$ sudo su
 (Enter password. "volumio" is default)
-# ./setup.sh
+./setup.sh
 Reboot Raspberry Pi here.
 Music in the playlist (Queue) should start playing at startup.
 
