@@ -1,5 +1,6 @@
 # mouse-volume4
 Improve Autostart funtionality based on mouse-volume
+<<<<<<< HEAD
 
 *** How to connect a wheel mouse to Volumio to control the volume ***
 
@@ -49,3 +50,5 @@ Initially tested using Raspberry Pi 3B+ and Volumio-3.795-2025-02-27
 
 
 
+=======
+>>>>>>> parent of 108bbaf (Update README.md)
