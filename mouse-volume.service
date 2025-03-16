@@ -1,0 +1,12 @@
+[Unit]
+Description=mouse-volume
+After=volumio.service network-online.target
+
+[Service]
+ExecStart=/usr/bin/node /home/volumio/mouse-volume/index.js
+Restart=always
+User=volumio
+WorkingDirectory=/home/volumio/mouse-volume
+
+[Install]
+WantedBy=multi-user.target
