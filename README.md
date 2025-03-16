@@ -21,9 +21,7 @@ volumio@volumio:~$ git clone https://github.com/tullyz/mouse-volume4
   and try again.)
   
 volumio@volumio:~$ cd mouse-volume
-
 volumio@volumio:~$ chmod u+x setup.sh
-
 volumio@volumio:~$ sudo su
 <<<<<<< HEAD
 　(Enter password. "volumio" is default)
@@ -32,10 +30,12 @@ volumio@volumio:~$ sudo su
 
 =======
 (Enter password. "volumio" is default)
-
  ./setup.sh
+<<<<<<< HEAD
  
 >>>>>>> parent of 801d066 (Update README.md)
+=======
+>>>>>>> parent of 747a09d (Update README.md)
 Reboot Raspberry Pi here.
 Music in the playlist (Queue) should start playing at startup.
 
