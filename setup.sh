@@ -9,7 +9,6 @@ touch /data/manifestUI
 
 # copy the service file
 sudo cp mouse-volume.service /etc/systemd/system/
-volumio
 sudo systemctl daemon-reload
 sudo systemctl enable mouse-volume.service
 sudo systemctl start mouse-volume.service
