@@ -1,6 +1,7 @@
 # mouse-volume4
 Improve Autostart funtionality based on mouse-volume
 
+
 *** How to connect a wheel mouse to Volumio to control the volume ***
 
 I made it easy to install software that adjusts the volume using a wheel mouse on the Volumio installed on the Raspberry Pi.
@@ -21,9 +22,13 @@ volumio@volumio:~$ chmod u+x setup.sh
 
 volumio@volumio:~$ sudo su
 (Enter password. "volumio" is default)
+<<<<<<< HEAD
 
  ./setup.sh
  
+=======
+./setup.sh
+>>>>>>> parent of 3af96fe (Update README.md)
 Reboot Raspberry Pi here.
 Music in the playlist (Queue) should start playing at startup.
 
