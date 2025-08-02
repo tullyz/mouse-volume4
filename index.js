@@ -19,43 +19,34 @@ var vol = 3;
 socket.emit('volume', vol);
 
 
-// Create play lists if empty
-socket.emit('listPlaylist');
-socket.on('pushListPlaylist', function(data) {
-    if (data.length == 0) {
-        socket.emit('createPlaylist', {"name":"Venice Classic Radio"});
-        socket.emit('addToPlaylist', {
-            "name":"Venice Classic Radio", 
-            "service":"webradio", 
-            "uri":"https://uk2.streamingpulse.com/ssl/vcr1"
-        });
-        socket.emit('createPlaylist', {"name":"Capital FM"});
-        socket.emit('addToPlaylist', {
-            "name":"Capital FM", 
-            "service":"webradio", 
-            "uri":"https://media-ssl.musicradio.com/Capital"
-        });
-    }
-});
+const stations = ["Venice Classic Radio", "Capital UK", "Classic FM"];
+let playstate = 1; // 0: Venice, 1: Capital, 2: Classic
 
-
-var playstate = 1;
-
+// Rotate the channel when a either button is clicked
+// Mute when a wheel button is clicked
 mouseDevice.on('click', function(e){
   if (e.button === 0) {
-    socket.emit('playPlaylist',{name:"Venice Classic Radio"});
+//    console.log("left click");
+    playstate = (playstate + 2) % stations.length;
+    socket.emit('playPlaylist', { name: stations[playstate] });
   }
   if (e.button === 2) {
-    socket.emit('playPlaylist',{name:"Capital FM"});
+//    console.log("right click");
+    playstate = (playstate + 1) % stations.length;
+    socket.emit('playPlaylist', { name: stations[playstate] });
   }
   if (e.button === 1) {
-    if (playstate == 1) {
-        socket.emit('pause');
-        playstate = 0;
-    } else {
-        socket.emit('play');
-        playstate = 1;
-    }
+//    console.log("wheel click");
+//    socket.emit('prev');
+//    socket.emit('next');
+  if (playstate == 1) {
+	socket.emit('pause');
+	playstate = 0
+	}
+  else {
+	socket.emit('play');
+	playstate = 1 
+	}
   }
 });
 
@@ -78,18 +69,23 @@ function createPlaylistIfNeeded(socket) {
     socket.emit('listPlaylist');
     socket.on('pushListPlaylist', function(data) {
         if (data.length == 0) {
-            console.log("Creating playlists...");
-            socket.emit('createPlaylist', {"name": "Venice Classic Radio"});
+            socket.emit('createPlaylist', {"name":"Venice Classic Radio"});
             socket.emit('addToPlaylist', {
-                "name": "Venice Classic Radio",
-                "service": "webradio",
-                "uri": "https://uk2.streamingpulse.com/ssl/vcr1"
+                "name":"Venice Classic Radio", 
+                "service":"webradio", 
+                "uri":"https://uk2.streamingpulse.com/ssl/vcr1"
             });
-            socket.emit('createPlaylist', {"name": "Capital FM"});
+            socket.emit('createPlaylist', {"name":"Capital UK"});
             socket.emit('addToPlaylist', {
-                "name": "Capital FM",
-                "service": "webradio",
-                "uri": "https://media-ssl.musicradio.com/Capital"
+                "name":"Capital UK", 
+                "service":"webradio", 
+                "uri":"https://media-ssl.musicradio.com/Capital"
+            });
+            socket.emit('createPlaylist', { name: "Classic FM" });
+            socket.emit('addToPlaylist', {
+            name: "Classic FM",
+            service: "webradio",
+            uri: "https://media-the.musicradio.com/ClassicFM"
             });
         }
     });
