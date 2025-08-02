@@ -52,9 +52,9 @@ Specification:
 
     By default, "Venice Classic Radio," "Capital UK," and "Classic FM" are supported.
 
-    Right-click to change channels in this order.
+    Right-click to change the playback channel in this order.
 
-    Left-click to change channels in the reverse order.
+    Left-click to change the channel in the reverse order.
 
 -Automatically start this software at startup.
 
