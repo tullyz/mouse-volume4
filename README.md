@@ -48,9 +48,13 @@ Specification:
 
 -Toggle pause / play when mouse wheel is pressed.
 
--Left click to select "Venice Classic Radio".
+‐ Add Web Radio Channels:
 
--Right click to select "Capital London".
+    By default, "Venice Classic Radio," "Capital UK," and "Classic FM" are supported.
+
+    Right-click to change channels in this order.
+
+    Left-click to change channels in the reverse order.
 
 -Automatically start this software at startup.
 
