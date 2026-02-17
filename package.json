@@ -1,27 +1,15 @@
 {
   "name": "mouse-volume4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Improve Autostart funtionality based on mouse-volume",
   "main": "index.js",
   "dependencies": {
-    "input-event": "^1.2.6",
-    "node-mouse": "^0.0.2",
-    "socket.io-client": "^2.3.1",
-    "webpack-remove-debug": "^0.1.0"
+    "input-event": "1.2.6",
+    "node-mouse": "0.0.2",
+    "socket.io-client": "2.3.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tullyz/mouse-volume4.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tullyz/mouse-volume4/issues"
-  },
-  "homepage": "https://github.com/tullyz/mouse-volume4#readme"
+  "license": "ISC"
 }
